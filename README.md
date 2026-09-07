@@ -1,6 +1,8 @@
-# Nombre del proyecto
+# Motor de Recomendación por Grupos
 
-Descripción breve del proyecto Node.js y del problema que resuelve.
+Consiste en desarrollar un script que represente a diferentes usuarios y sus intereses mediante conjuntos. Cada usuario tendrá un conjunto de amigos, intereses, películas, productos u otros elementos relacionados. El algoritmo utilizará operaciones de conjuntos como intersección, unión y diferencia para analizar las coincidencias entre los usuarios y generar recomendaciones.
+
+Por ejemplo, si dos usuarios tienen varios amigos en común, el sistema puede identificar esas coincidencias y sugerir que se conecten. De la misma manera, si varios usuarios comparten intereses similares, el programa puede recomendar productos, películas, videojuegos u otros contenidos que podrían ser de su interés.
 
 ## Requisitos
 
