@@ -6,101 +6,69 @@ Por ejemplo, si dos usuarios tienen varios amigos en común, el sistema puede id
 
 ## Requisitos
 
-- [Node.js](https://nodejs.org/) 18 o superior
-- npm, incluido con Node.js
+- [Python](https://www.python.org/) 3.10 o superior
+- pip (incluido con Python)
 
 ## Instalación
 
 1. Clona el repositorio:
 
-   ```bash
+```bash
    git clone <URL_DEL_REPOSITORIO>
    cd <NOMBRE_DEL_PROYECTO>
-   ```
+```
 
 2. Instala las dependencias:
 
-   ```bash
-   npm install
-   ```
-
-3. Crea el archivo de variables de entorno a partir del ejemplo, si existe:
-
-   ```bash
-   copy .env.example .env
-   ```
-
-   En macOS o Linux, utiliza `cp .env.example .env`.
-
-4. Configura los valores necesarios en `.env`.
+```bash
+   pip install -r requirements.txt
+```
 
 ## Uso
 
-Inicia el proyecto en modo desarrollo:
+Ejecuta el script base por consola (versión sin interfaz gráfica):
 
 ```bash
-npm run dev
+python Ejemplo1.py
 ```
 
-Inicia el proyecto en modo producción:
+Ejecuta la interfaz gráfica con Streamlit:
 
 ```bash
-npm start
+streamlit run app_streamlit.py
 ```
 
-## Scripts disponibles
-
-- `npm run dev`: inicia el servidor en modo desarrollo.
-- `npm start`: inicia la aplicación.
-- `npm test`: ejecuta las pruebas.
-- `npm run lint`: analiza el código con el linter.
-- `npm run build`: genera la versión de producción, si aplica.
-
-> Ajusta esta lista para que coincida con los scripts definidos en `package.json`.
+Esto último abre automáticamente el navegador en `http://localhost:8501`.
 
 ## Estructura del proyecto
 
 ```text
 .
-├── src/              # Código fuente
-├── test/             # Pruebas
-├── .env.example      # Variables de entorno de ejemplo
-├── package.json      # Dependencias y scripts
+├── Ejemplo1.py         # Script base: lógica de conjuntos y motor de recomendación
+├── app_streamlit.py    # Interfaz gráfica del motor de recomendación
+├── requirements.txt    # Dependencias del proyecto
+├── .gitignore
 └── README.md
 ```
 
-## Variables de entorno
+## Cómo funciona
 
-| Variable | Descripción | Ejemplo |
-| --- | --- | --- |
-| `PORT` | Puerto donde se ejecuta la aplicación | `3000` |
-| `NODE_ENV` | Entorno de ejecución | `development` |
-
-No compartas credenciales, tokens ni claves privadas. El archivo `.env` debe estar incluido en `.gitignore`.
-
-## Pruebas
-
-Ejecuta todas las pruebas con:
-
-```bash
-npm test
-```
-
-## API
-
-Si el proyecto expone una API, documenta aquí los endpoints principales:
-
-| Método | Ruta | Descripción |
-| --- | --- | --- |
-| `GET` | `/` | Comprueba que la aplicación está disponible |
+- Cada usuario se representa como un **conjunto (`set`)** de intereses.
+- **Intersección (`&`)**: calcula los intereses o amigos en común entre dos usuarios.
+- **Unión (`|`)**: combina todos los intereses de un grupo sin duplicados.
+- **Diferencia (`-`)**: identifica qué le falta a un usuario respecto a otro, usado para generar sugerencias.
 
 ## Contribución
 
-1. Crea una rama para tu cambio.
-2. Realiza el cambio y añade pruebas cuando sea necesario.
-3. Verifica que los scripts de calidad y pruebas pasan correctamente.
-4. Abre un pull request describiendo el cambio.
+1. Crea una rama para tu cambio (`git checkout -b nombre-tarea`).
+2. Realiza el cambio y pruébalo localmente antes de subirlo.
+3. Sube tu rama y abre un Pull Request hacia `main` describiendo el cambio.
+4. Espera revisión del equipo antes de hacer merge.
+
+## Integrantes del grupo
+
+- (agregar los 6 nombres del equipo aquí)
 
 ## Licencia
 
-Indica aquí la licencia del proyecto, por ejemplo: `MIT`.
+Uso académico — Universidad Mariano Gálvez, Matemática Discreta.
