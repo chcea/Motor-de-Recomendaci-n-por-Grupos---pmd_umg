@@ -13,7 +13,6 @@ import pandas as pd
 # ---------------------------------------------------------
 # 1. DATOS: usuarios representados como conjuntos de intereses
 # ---------------------------------------------------------
-# (Los mismos del script base - podés reemplazarlos por los de tu grupo)
 
 if "usuarios" not in st.session_state:
     st.session_state.usuarios = {
@@ -71,7 +70,7 @@ st.caption("Amigos en común - basado en Teoría de Conjuntos")
 # --- Sección: agregar/editar usuarios ---
 with st.expander("➕ Agregar o editar un usuario"):
     nombre = st.text_input("Nombre del usuario")
-    intereses_texto = st.text_input("Intereses (separados por coma)", placeholder="música, fútbol, cine")
+    intereses_texto = st.text_input("Intereses (separados por coma)", placeholder="-----, ------, -----")
     if st.button("Guardar usuario"):
         if nombre and intereses_texto:
             nuevos_intereses = {i.strip().lower() for i in intereses_texto.split(",") if i.strip()}
