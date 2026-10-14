@@ -1,18 +1,5 @@
-"""
-Motor de Recomendación por Grupos (Amigos en Común)
-Interfaz gráfica con Streamlit
-
-Para correrlo:
-    1. pip install streamlit
-    2. streamlit run app_streamlit.py
-"""
-
 import streamlit as st
 import pandas as pd
-
-# ---------------------------------------------------------
-# 1. DATOS: usuarios representados como conjuntos de intereses
-# ---------------------------------------------------------
 
 if "usuarios" not in st.session_state:
     st.session_state.usuarios = {
@@ -24,11 +11,6 @@ if "usuarios" not in st.session_state:
     }
 
 usuarios = st.session_state.usuarios
-
-
-# ---------------------------------------------------------
-# 2. OPERACIONES DE CONJUNTOS (mismas del script base)
-# ---------------------------------------------------------
 
 def interseccion(a: set, b: set) -> set:
     return a & b
@@ -57,11 +39,6 @@ def calcular_afinidad(usuarios: dict) -> list:
             })
     resultados.sort(key=lambda x: x["Afinidad"], reverse=True)
     return resultados
-
-
-# ---------------------------------------------------------
-# 3. INTERFAZ
-# ---------------------------------------------------------
 
 st.set_page_config(page_title="Motor de Recomendación", page_icon="🔗", layout="centered")
 st.title("🔗 Motor de Recomendación por Grupos")
