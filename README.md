@@ -70,6 +70,9 @@ Esto último abre automáticamente el navegador en `http://localhost:8501`.
 - NEHEMIAS
 - jOSUE
 - LINDSY
+- CARLOS
+- ANDERSON
+- FERNANDO
 
 ## Licencia
 
