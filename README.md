@@ -67,7 +67,9 @@ Esto último abre automáticamente el navegador en `http://localhost:8501`.
 
 ## Integrantes del grupo
 
-- (agregar los 6 nombres del equipo aquí)
+- NEHEMIAS
+- jOSUE
+- LINDSY
 
 ## Licencia
 
